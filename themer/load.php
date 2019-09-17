@@ -68,6 +68,7 @@ class Load {
         'Description'         => Data::get('Description'),
       ),
       'pages'                 => Data::get('Pages'),
+      'posts'                 => Data::get('Posts'),
       'advanced' => array(
         'AskEnabled'          => Data::get('AskEnabled'),
         'AskLabel'            => Data::get('AskLabel'),

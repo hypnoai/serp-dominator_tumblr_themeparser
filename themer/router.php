@@ -55,6 +55,11 @@ class Router {
     });
     
     // Permalink Pages
+    respond('/archive/', function($req) {
+      exit('achive route');
+    });
+    
+    // Permalink Pages
     respond('/post/[i:post_id]', function($req) {
       Router::post($req->post_id);
     });
@@ -72,7 +77,7 @@ class Router {
     // Home Page
     respond('/', function($req) {
       // If there is no ?theme param, load the Themer app front
-      if( ! array_key_exists('theme', $req->params())) Load::application();
+      //if( ! array_key_exists('theme', $req->params())) Load::application();
     });
     
     // 404 Not Found

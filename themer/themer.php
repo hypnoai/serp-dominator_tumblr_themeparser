@@ -46,10 +46,10 @@ class Themer {
     
     $theme = self::parse_theme();
 
-    if(isset($_GET['is_frame']))
-    {
-      $theme = \Themer::add_js_insert($theme);
-    }
+    //if(true)//isset($_GET['is_frame'])
+    //{
+      //$theme = \Themer::add_js_insert($theme);
+    //}
 
     Load::display_html($theme);
   }
@@ -128,7 +128,7 @@ class Themer {
     Data::load('data');
     
     // Filter out the '?theme' portion of the GET request
-    $get = array_diff_assoc($_GET, array('theme' => '', 'is_frame' => ''));
+    //$get = array_diff_assoc($_GET, array('theme' => '', 'is_frame' => ''));
     
     // Let's see if there is any $_GET data left to merge
     if( ! empty($get))
@@ -137,7 +137,7 @@ class Themer {
         'Title'               => 'Title',
         'Description'         => 'Description',
         'MetaDescription'     => array('Description', '', 'strip_tags'),
-        'Pages'               => array('Pages', array()),
+        //'Pages'               => array('Pages', array()),
         'Posts'               => array('Posts', array()),
         'AskEnabled'          => array('AskEnabled', FALSE),
         'AskLabel'            => 'AskLabel',

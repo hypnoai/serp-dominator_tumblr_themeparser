@@ -44,10 +44,11 @@ class Posts {
   public static function render($theme, $post_data)
   {
     $posts = Block::find($theme, 'Posts');
-    //Error::display(" Got this far in rendering posts!.");
+    ##exit(" Got this far in rendering posts!.");
     
     foreach($posts as $post)
     { 
+      print("rendering a post!");
       $tmp = Block::render($post, 'Posts');
       $tmp = self::_render_posts($tmp, $post_data);
       $theme = str_replace($post, $tmp, $theme);
