@@ -80,6 +80,7 @@ class Posts {
       $index = $index + 1;
       $offset = (($index) % 2) ? 'Odd' : 'Even';
       
+      print('render posts');
       $tmp = Block::render($block, 'Post'.$index);
       $tmp = Block::render($tmp, $offset);
       $tmp = Block::render($tmp, $post['PostType']);
@@ -92,6 +93,7 @@ class Posts {
       
       foreach($post as $k => $v)
       {
+        print("Printing... a post..");
         // Is it a private variable? If so, skip it.
         if(strpos($k, '_') === 0) break;
         
